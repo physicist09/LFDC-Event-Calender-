@@ -2,43 +2,11 @@
 
 <head>
     <title>LFDC COLLEGE EVENT CALENDAR</title>
+
+
     <style>
-        #video-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
-        
-        #my-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            transform: translate(-50%, -50%);
-        }
-        
-        #video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background-color: #000;
-            opacity: 0.5;
-        }
-        
-        #page-content {
-            z-index: 2;
-        }
-        
         body {
-            background-color: gold;
+            background-color: rgb(238, 203, 7);
             color: red;
             font-family: 'Helvetica Neue', sans-serif;
         }
@@ -87,47 +55,37 @@
             text-align: center;
         }
     </style>
-    <script>
-        const myVideo = document.getElementById('my-video');
-        myVideo.addEventListener('ended', function() {
-            const videoContainer = document.getElementById('video-container');
-            const pageContent = document.getElementById('page-content');
 
-            videoContainer.style.display = 'none';
-            pageContent.style.display = 'block';
-        });
-    </script>
+
 </head>
 
 <body>
-    <div id="video-container">
-        <video id="my-video" src="loadinganimation.mp4" autoplay muted loop></video>
-        <div id="video-overlay"></div>
+
+    <div class="container" accesskey="">
+        <video width="100%" controls autoplay>
+  <source src="loadinganimation.mp4" type="video/mp4">
+  <source src="loadinganimation.ogg" type="video/ogg">
+</video>
     </div>
-
-    <div id="page-content">
-        <div class="fullpage">
-            <h1>Little Flower Degree College Event Calendar</h1>
-            <img class="logo" src="http://www.lfdc.edu.in/images/logo.gif" alt="LFDC logo">
-            <ul class="menu">
-                <li><a href="description.html">Description</a></li>
-                <li><a href="http://localhost/events.php">Events</a></li>
-                <li><a href="confirm.html">Add event</a></li>
-                <li><a href="confirm.html">Delete event</a></li>
-                <li><a href="confirm.html">Edit event</a></li>
-            </ul>
-            <div class="content">
-                <!-- Your webpage content here  asddasf -->
-            </div>
-            <footer>
-                <p>Authors : Eluri Vivek Krishna<br>Kavya Sri Ganji<br>M.Mohan<br>
-                    <a href="mailto:lfdc420@gmail.com">lfdc420@gmail.com</a><br>All rights reserved.</p>
-            </footer>
-
+    <div class="fullpage">
+        <h1>Little Flower Degree College Event Calendar</h1>
+        <img class="logo" src="http://www.lfdc.edu.in/images/logo.gif" alt="LFDC logo">
+        <ul class="menu">
+            <li><a href="description.html">Description</a></li>
+            <li><a href="http://localhost/events.php">Events</a></li>
+            <li><a href="confirm.html">Add event</a></li>
+            <li><a href="confirm.html">Delete event</a></li>
+            <li><a href="confirm.html">Edit event</a></li>
+        </ul>
+        <div class="content">
+            <!-- Your webpage content here -->
         </div>
+        <footer>
+            <p>Authors : Eluri Vivek Krishna<br>Kavya Sri Ganji<br>M.Mohan<br>
+                <a href="mailto:vivekkrishnaeluri@gmail.com">vivekkrishnaeluri@gmail.com</a><br>All rights reserved.</p>
+        </footer>
+
     </div>
-
-
 </body>
 
 </html>

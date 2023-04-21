@@ -1,0 +1,133 @@
+<html>
+
+<head>
+    <title>LFDC COLLEGE EVENT CALENDAR</title>
+    <style>
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        #my-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: #000;
+            opacity: 0.5;
+        }
+        
+        #page-content {
+            z-index: 2;
+        }
+        
+        body {
+            background-color: gold;
+            color: red;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .logo {
+            display: block;
+            margin: auto;
+            width: 200px;
+            height: 150px;
+        }
+        
+        ul.menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: #111;
+        }
+        
+        footer {
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        const myVideo = document.getElementById('my-video');
+        myVideo.addEventListener('ended', function() {
+            const videoContainer = document.getElementById('video-container');
+            const pageContent = document.getElementById('page-content');
+
+            videoContainer.style.display = 'none';
+            pageContent.style.display = 'block';
+        });
+    </script>
+</head>
+
+<body>
+    <div id="video-container">
+        <video id="my-video" src="loadinganimation.mp4" autoplay muted loop></video>
+        <div id="video-overlay"></div>
+    </div>
+
+    <div id="page-content">
+        <div class="fullpage">
+            <h1>Little Flower Degree College Event Calendar</h1>
+            <img class="logo" src="http://www.lfdc.edu.in/images/logo.gif" alt="LFDC logo">
+            <ul class="menu">
+                <li><a href="description.html">Description</a></li>
+                <li><a href="http://localhost/events.php">Events</a></li>
+                <li><a href="confirm.html">Add event</a></li>
+                <li><a href="confirm.html">Delete event</a></li>
+                <li><a href="confirm.html">Edit event</a></li>
+            </ul>
+            <div class="content">
+                <!-- Your webpage content here  asddasf -->
+            </div>
+            <footer>
+                <p>Authors : Eluri Vivek Krishna<br>Kavya Sri Ganji<br>M.Mohan<br>
+                    <a href="mailto:lfdc420@gmail.com">lfdc420@gmail.com</a><br>All rights reserved.</p>
+            </footer>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
