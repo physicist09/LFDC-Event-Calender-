@@ -22,16 +22,7 @@
             transform: translate(-50%, -50%);
         }
         
-        #video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background-color: #000;
-            opacity: 0.5;
-        }
+        
         
         #page-content {
             z-index: 2;
@@ -87,16 +78,7 @@
             text-align: center;
         }
     </style>
-    <script>
-        const myVideo = document.getElementById('my-video');
-        myVideo.addEventListener('ended', function() {
-            const videoContainer = document.getElementById('video-container');
-            const pageContent = document.getElementById('page-content');
-
-            videoContainer.style.display = 'none';
-            pageContent.style.display = 'block';
-        });
-    </script>
+    
 </head>
 
 <body>
