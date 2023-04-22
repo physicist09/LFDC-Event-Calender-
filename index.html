@@ -5,6 +5,13 @@
 
 
     <style>
+        #myVideo {
+  display: block;
+}
+
+#content {
+  display: none;
+}
         body {
             background-color: rgb(238, 203, 7);
             color: red;
@@ -61,13 +68,14 @@
 
 <body>
 
-    <div class="container" accesskey="">
-        <video width="100%" controls autoplay>
+   
+        <video id=myVideo width="100%" controls autoplay>
   <source src="loadinganimation.mp4" type="video/mp4">
   <source src="loadinganimation.ogg" type="video/ogg">
 </video>
-    </div>
-    <div class="fullpage">
+     <button id="toggleBtn" style="display:none;">click here to view the content of the web page
+    </button>
+    <div id="content">
         <h1>Little Flower Degree College Event Calendar</h1>
         <img class="logo" src="http://www.lfdc.edu.in/images/logo.gif" alt="LFDC logo">
         <ul class="menu">
@@ -77,15 +85,35 @@
             <li><a href="confirm.html">Delete event</a></li>
             <li><a href="confirm.html">Edit event</a></li>
         </ul>
-        <div class="content">
-            <!-- Your webpage content here -->
-        </div>
+       
         <footer>
             <p>Authors : Eluri Vivek Krishna<br>Kavya Sri Ganji<br>M.Mohan<br>
                 <a href="mailto:vivekkrishnaeluri@gmail.com">vivekkrishnaeluri@gmail.com</a><br>All rights reserved.</p>
         </footer>
 
     </div>
+    
+     <script>
+  const myVideo = document.getElementById("myVideo");
+  const content = document.getElementById("content");
+  const toggleBtn = document.getElementById("toggleBtn");
+
+  myVideo.addEventListener("ended", function() {
+    toggleBtn.style.display = "block";
+  });
+
+  toggleBtn.addEventListener("click", function() {
+    if (myVideo.style.display !== "none") {
+      myVideo.style.display = "none";
+      myDiv.style.display = "block";
+    } else {
+      myVideo.style.display = "block";
+      myDiv.style.display = "none";
+    }
+  });
+</script>
+
+    
 </body>
 
 </html>
