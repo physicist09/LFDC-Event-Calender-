@@ -133,32 +133,32 @@
 
     </div>
     
-     <script>
-  const myVideo = document.getElementById("myVideo");
-  const content = document.getElementById("content");
-  const toggleBtn = document.getElementById("toggleBtn");
-
-  myVideo.addEventListener("ended", function() {
-    toggleBtn.style.display = "block";
-  });
-
-  toggleBtn.addEventListener("click", function() {
-    if (myVideo.style.display !== "none") {
-      myVideo.style.display = "none";
-      content.style.display = "block";
-          toggleBtn.style.display = "none"; // Add this line to hide the button
-    } else {
-      myVideo.style.display = "block";
-      content.style.display = "none";
-         toggleBtn.style.display = "block"; // Add this line to show the button
-    }
-  });
-         
-         toggleBtn.addEventListener('click', function() {
-  // Hide the showcontent button
-  toggleBtn.style.display = 'none';
-});
-</script>
+    <script>
+      const myVideo = document.getElementById("myVideo");
+      const myDiv = document.getElementById("myDiv");
+      const toggleBtn = document.getElementById("toggleBtn");
+    
+      myVideo.addEventListener("ended", function() {
+        toggleBtn.style.display = "block";
+      });
+    
+      toggleBtn.addEventListener("click", function() {
+        if (myVideo.style.display !== "none") {
+          myVideo.style.display = "none";
+          myDiv.style.display = "block";
+          toggleBtn.style.display = "none";
+        } else {
+          myVideo.style.display = "block";
+          myDiv.style.display = "none";
+          toggleBtn.style.display = "block";
+        }
+      });
+    
+      myDiv.addEventListener("click", function(event) {
+        event.stopPropagation();
+      });
+    </script>
+    
 
     
 </body>
