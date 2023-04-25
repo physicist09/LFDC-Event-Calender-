@@ -135,7 +135,7 @@
     
     <script>
       const myVideo = document.getElementById("myVideo");
-      const myDiv = document.getElementById("myDiv");
+      const content = document.getElementById("content");
       const toggleBtn = document.getElementById("toggleBtn");
     
       myVideo.addEventListener("ended", function() {
@@ -143,21 +143,13 @@
       });
     
       toggleBtn.addEventListener("click", function() {
-        if (myVideo.style.display !== "none") {
-          myVideo.style.display = "none";
-          myDiv.style.display = "block";
-          toggleBtn.style.display = "none";
-        } else {
-          myVideo.style.display = "block";
-          myDiv.style.display = "none";
-          toggleBtn.style.display = "block";
-        }
-      });
-    
-      myDiv.addEventListener("click", function(event) {
-        event.stopPropagation();
+        myVideo.style.display = "none";
+        content.style.display = "block";
+        content.style.zIndex = "1";
+        toggleBtn.style.display = "none"; // hide the button
       });
     </script>
+    
     
 
     
