@@ -107,14 +107,7 @@
 
 <body>
 
-   <div id="container">
-        <video id=myVideo width="100%" controls autoplay>
-  <source src="loadinganimation.mp4" type="video/mp4">
-  <source src="loadinganimation.ogg" type="video/ogg">
-</video>
-     <button id="toggleBtn" style="display:none;">click here to view the content of the web page
-    </button>
-    </div>
+  
     <div id="content">
         <h1>Little Flower Degree College Event Calendar</h1>
         <img class="logo" src="http://www.lfdc.edu.in/images/logo.gif" alt="LFDC logo">
@@ -134,23 +127,7 @@
 
     </div>
     
-    <script>
-      const myVideo = document.getElementById("myVideo");
-      const content = document.getElementById("content");
-      const toggleBtn = document.getElementById("toggleBtn");
-    
-      myVideo.addEventListener("ended", function() {
-        toggleBtn.style.display = "block";
-      });
-    
-      toggleBtn.addEventListener("click", function() {
-        myVideo.style.display = "none";
-        content.style.display = "block";
-        content.style.zIndex = "1";
-        toggleBtn.style.display = "none"; // hide the button
-      });
-    </script>
-    
+   
     
 
     
