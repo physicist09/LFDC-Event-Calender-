@@ -112,7 +112,43 @@
         <h1>Little Flower Degree College Event Calendar</h1>
         <img class="logo" src="http://www.lfdc.edu.in/images/logo.gif" alt="LFDC logo">
         <ul class="menu">
-          
+            <!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quote</title>
+</head>
+<body>
+    <h1>Random Quote</h1>
+    <p id="quote"></p>
+    <button id="getQuote">Get Random Quote</button>
+
+    <script type="text/javascript">
+        const api_url = "https://zenquotes.io/api/quotes/random";
+
+        async function getapi(url) {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            // Get a random quote from the API data
+            const randomIndex = Math.floor(Math.random() * data.length);
+            const randomQuote = data[randomIndex];
+
+            // Display the random quote on the web page
+            document.getElementById('quote').textContent = randomQuote.q;
+
+            // You can also display the author if needed
+            // document.getElementById('author').textContent = `Author: ${randomQuote.a}`;
+        }
+
+        document.getElementById('getQuote').addEventListener('click', function () {
+            getapi(api_url);
+        });
+
+        // Get an initial random quote when the page loads
+        getapi(api_url);
+    </script>
+</body>
+</html>
             <li><a href="description.html">Description</a></li>
             <li><a href="http://localhost/events.php">Events</a></li>
             <li><a href="confirm.html">Add event</a></li>
