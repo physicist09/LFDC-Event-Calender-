@@ -111,16 +111,13 @@
     <div id="content">
         <h1>Little Flower Degree College Ev Calendar</h1>
         <img class="logo" src="http://www.lfdc.edu.in/images/logo.gif" alt="LFDC logo">
-        <ul class="menu">
-            <!DOCTYPE html>
 
 
-    <h1>Random Quote</h1>
-    <p id="quote"></p>
+<p id="quote"></p>
     <button id="getQuote">Get Random Quote</button>
 
     <script type="text/javascript">
-        const api_url = "https://zenquotes.io/api/quotes/random";
+        const api_url = "https://zenquotes.io/api/quotes/";
 
         async function getapi(url) {
             const response = await fetch(url);
@@ -144,9 +141,9 @@
         // Get an initial random quote when the page loads
         getapi(api_url);
     </script>
-
-
-            <li><a href="description.html">Description</a></li>
+        
+        <ul class="menu">
+           <li><a href="description.html">Description</a></li>
             <li><a href="http://localhost/events.php">Events</a></li>
             <li><a href="confirm.html">Add event</a></li>
             <li><a href="confirm.html">Delete event</a></li>
